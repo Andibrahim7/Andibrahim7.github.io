@@ -3,32 +3,187 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CV Andi Ibrahim</title>
+    
+    <style>
+        body {
+            font-family: 'Arial Black', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #000428, #004e92);
+            text-align: center;
+            color: white;
+        }
+        .container {
+            width: 50%;
+            margin: 50px auto;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 50px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+            text-align: left;
+        }
+        h1, h2, h3 {
+            font-family: 'Didot', sans-serif;
+            text-align: center;
+        }
+        h1 {
+            font-size: 2.5em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-bottom: 3px solid #004e92;
+            padding-bottom: 10px;
+        }
+        h2 {
+            margin-top: 20px;
+            border-bottom: 2px solid #004e92;
+            padding-bottom: 5px;
+            display: inline-block
+            margin: center;
+        }
+        table {
+            width: 90%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        table, th, td {
+            border: 1px solid white;
+            text-align: center;
+            padding: 10px;
+        }
+        th {
+            background: #004e92;
+        }
+        img {
+            border-radius: 50%;
+            margin-top: 20px;
+            border: 5px solid #004e92;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .social-links {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .social-links a {
+            margin: 0 10px;
+            display: inline-block;
+        }
+        .social-links img {
+            width: 40px;
+            height: 40px;
+        }
+        form {
+            text-align: center;
+            margin-top: 20px;
+        }
+        input, textarea, button {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+        button {
+            background-color: #004e92;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #003366;
+        }
+    </style>
+    
+    <script>
+        function sendMessage() {
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var message = document.getElementById('message').value;
+            var phoneNumber = '6285210211303'; // Ganti dengan nomor tujuan
+            
+            var whatsappURL = `https://wa.me/${phoneNumber}?text=Halo, nama saya ${name}. Email saya ${email}. Saya ingin bertanya: ${message}`;
+            
+            window.open(whatsappURL, '_blank');
+        }
+    </script>
 </head>
-<>
-    <h1>TENTANG GWE</h1>
-    <h3>Nama Saya Andi Ibrahim panggil saja irun</h3>
-    <h2>Pendidikan Saya:</h2>
-    <ol>
-        <li>TK</li>
-        <li>SD</li>
-        <li>MTS</li>
-        <li>SMA</li>
-        <li>KULIAH (S1)</li>
-    </ol>
-    <h2>Kegiatan sehari-hari saya:</h2>
-    <ol>
-        <li>Bangun tidur</li>
-        <li>Minum air </li>
-        <li>Nonton</li>
-        <li>Makan</li>
-        <li>Tidur</li>
-    </ol>
+<body>
+    <div class="container">
+        <h1>Runsky</h1>
+        <img src="poto.jpeg" alt="Andi Ibrahim" height="200" width="200">
+        
+        <div class="social-links">
+            <a href="https://www.instagram.com/andibrahim_?igsh=aTNvY3d3Z3k3N2Zn&utm_source=qr" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+            </a>
+            <a href="https://wa.me/6285210211303" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+            </a>
+            <a href="https://www.facebook.com/andibrahimm.andibrahimm" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+            </a>
+        </div>
 
-    
-    <img src="image.jpg" alt="Runsky" height="140" width="auto">
-    <br>
-    <a href="https://www.instagram.com/andibrahim_?igsh=aTNvY3d3Z3k3N2Zn&utm_source=qr">Follow My Instagram plss!!!</a>
-    
+        <h2>Tentang Saya</h2>
+        <p>Saya adalah mahasiswa dari jurusan Ilmu Komputer Universitas Halu Oleo</p>
+
+        <h2>Biodata</h2>
+        <table>
+            <tr>
+                <th>Nama</th>
+                <td>Andi Ibrahim Mugfirun Rijaal</td>
+            </tr>
+            <tr>
+                <th>Tanggal Lahir</th>
+                <td>14 Juni 2005</td>
+            </tr>
+            <tr>
+                <th>Alamat</th>
+                <td>Kendari, Kambu</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>ibrahimkdi12345@gmail.com</td>
+            </tr>
+        </table>
+        
+        <h2>Riwayat Pendidikan</h2>
+        <table>
+            <tr>
+                <th>Jenjang</th>
+                <th>Tahun</th>
+            </tr>
+            <tr>
+                <td>SD</td>
+                <td>2011 - 2017</td>
+            </tr>
+            <tr>
+                <td>SMP</td>
+                <td>2017 - 2020</td>
+            </tr>
+            <tr>
+                <td>SMA</td>
+                <td>2020 - 2023</td>
+            </tr>
+            <tr>
+                <td>Kuliah</td>
+                <td>2023 - Sekarang</td>
+            </tr>
+        </table>
+        
+        <h2>Hubungi Saya</h2>
+        <form onsubmit="event.preventDefault(); sendMessage();">
+            <input type="text" id="name" placeholder="Nama Anda" required><br>
+            <input type="email" id="email" placeholder="Email Anda" required pattern=".+@.+\..+" oninvalid="this.setCustomValidity('Masukkan email yang valid!')" oninput="this.setCustomValidity('')"><br>
+            <textarea id="message" placeholder="Pesan Anda" required></textarea><br>
+            <button type="submit">Kirim ke WhatsApp</button>
+        </form>
+    </div>
 </body>
 </html>
