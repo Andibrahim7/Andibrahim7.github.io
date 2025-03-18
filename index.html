@@ -7,37 +7,37 @@
     
     <style>
         body {
-            font-family: 'Arial Black', sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, #000428, #004e92);
+            background: linear-gradient(135deg, #5D4037, #D7CCC8);
             text-align: center;
-            color: white;
+            color: #3E2723;
         }
         .container {
             width: 50%;
             margin: 50px auto;
-            background: rgba(0, 0, 0, 0.8);
+            background: #EFEBE9;
             padding: 50px;
             border-radius: 15px;
-            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
-            backdrop-filter: blur(10px);
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
             text-align: left;
         }
         h1, h2, h3 {
-            font-family: 'Didot', sans-serif;
+            font-family: 'Georgia', serif;
             text-align: center;
+            color: #4E342E;
         }
         h1 {
             font-size: 2.5em;
             text-transform: uppercase;
             letter-spacing: 2px;
-            border-bottom: 3px solid #004e92;
+            border-bottom: 3px solid #6D4C41;
             padding-bottom: 10px;
         }
         h2 {
             margin-top: 20px;
-            border-bottom: 2px solid #004e92;
+            border-bottom: 2px solid #795548;
             padding-bottom: 5px;
             display: inline-block
             margin: center;
@@ -46,22 +46,23 @@
             width: 90%;
             margin: 20px auto;
             border-collapse: collapse;
-            background: rgba(255, 255, 255, 0.1);
+            background: #D7CCC8;
             border-radius: 10px;
             overflow: hidden;
         }
         table, th, td {
-            border: 1px solid white;
+            border: 1px solid #5D4037;
             text-align: center;
             padding: 10px;
         }
         th {
-            background: #004e92;
+            background: #795548;
+            color: white;
         }
         img {
             border-radius: 50%;
             margin-top: 20px;
-            border: 5px solid #004e92;
+            border: 5px solid #795548;
             display: block;
             margin-left: auto;
             margin-right: auto;
@@ -86,17 +87,19 @@
             width: 80%;
             padding: 10px;
             margin: 10px 0;
-            border: none;
+            border: 1px solid #6D4C41;
             border-radius: 5px;
             font-size: 1em;
+            background: white;
+            color: #3E2723;
         }
         button {
-            background-color: #004e92;
+            background-color: #6D4C41;
             color: white;
             cursor: pointer;
         }
         button:hover {
-            background-color: #003366;
+            background-color: #4E342E;
         }
     </style>
     
@@ -105,7 +108,7 @@
             var name = document.getElementById('name').value;
             var email = document.getElementById('email').value;
             var message = document.getElementById('message').value;
-            var phoneNumber = '6285210211303'; // Ganti dengan nomor tujuan
+            var phoneNumber = '6285210211303'; 
             
             var whatsappURL = `https://wa.me/${phoneNumber}?text=Halo, nama saya ${name}. Email saya ${email}. Saya ingin bertanya: ${message}`;
             
@@ -116,7 +119,7 @@
 <body>
     <div class="container">
         <h1>Runsky</h1>
-        <img src="poto.jpeg" alt="Andi Ibrahim" height="200" width="200">
+        <img src="moto.jpeg" alt="Andi Ibrahim" height="200" width="200">
         
         <div class="social-links">
             <a href="https://www.instagram.com/andibrahim_?igsh=aTNvY3d3Z3k3N2Zn&utm_source=qr" target="_blank">
@@ -156,31 +159,36 @@
         <h2>Riwayat Pendidikan</h2>
         <table>
             <tr>
-                <th>Jenjang</th>
                 <th>Tahun</th>
+                <th>Institusi</th>
+                <th>Keterangan</th>
             </tr>
             <tr>
-                <td>SD</td>
                 <td>2011 - 2017</td>
+                <td>SD Negeri 12 Kendari</td>
+                <td>Lulus</td>
             </tr>
             <tr>
-                <td>SMP</td>
                 <td>2017 - 2020</td>
+                <td>MTS Negeri 2 Kendari</td>
+                <td>Lulus</td>
             </tr>
             <tr>
-                <td>SMA</td>
                 <td>2020 - 2023</td>
+                <td>SMA Negeri 9 Kendari</td>
+                <td>Lulus</td>
             </tr>
             <tr>
-                <td>Kuliah</td>
                 <td>2023 - Sekarang</td>
+                <td>Universitas Halu Oleo</td>
+                <td>Mahasiswa</td>
             </tr>
         </table>
         
         <h2>Hubungi Saya</h2>
         <form onsubmit="event.preventDefault(); sendMessage();">
             <input type="text" id="name" placeholder="Nama Anda" required><br>
-            <input type="email" id="email" placeholder="Email Anda" required pattern=".+@.+\..+" oninvalid="this.setCustomValidity('Masukkan email yang valid!')" oninput="this.setCustomValidity('')"><br>
+            <input type="email" id="email" placeholder="Email Anda" required><br>
             <textarea id="message" placeholder="Pesan Anda" required></textarea><br>
             <button type="submit">Kirim ke WhatsApp</button>
         </form>
